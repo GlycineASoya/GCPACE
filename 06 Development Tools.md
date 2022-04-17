@@ -1,7 +1,7 @@
 # Development Tools
 
 * Cloud SDK - main CLI interface
-* Same as AWS SDK
+* Same as AWS CLI
 * Cloud SDK has libraries for
   * Java
   * Python
