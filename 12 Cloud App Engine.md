@@ -4,7 +4,7 @@
 
 ### Deploying Cloud SDK (Cloud Shell)
 
-`gclopud components install APPLICATION_NAME` - install/update Python library as needed
+`gcloud components install APPLICATION_NAME` - install/update Python library as needed
 `git clone GIT_URL` - downloads repository to the App Engine environment
 `git app deploy YAML_FILE` - upload local config yaml and code to App Engine
 `gcloud app versions stop APP_VERSION_NUMBER` - stops serving version
