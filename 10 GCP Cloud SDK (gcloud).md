@@ -149,3 +149,47 @@ Get zones list
 `gcloud container clusters list` - lists names, basic info of all clusters
 
 `gcloud container clusters describe CLUSTER_NAME [--zone=ZONE_NAME]` - get details of the cluster, such as client certificate, username, password
+
+## Cloud SQL
+
+### Cloud SQL server
+
+`gcloud sql connect INSTANCE_NAME -user=USER` - connect to a DB using a specific user
+
+`gcloud sql backups create --async --instance INSTANCE_NAME` - creating a backup of the Cloud SQL instance
+
+`gcloud sql patch INSTANCE_NAME -backup-start-time HH:MM:SS` - set automatic backups
+
+## Cloud Datastore
+
+`gsutil mb gs://BUCKET_NAME` - create a bucket for Datastore backups
+
+`gcloud datastore export -namespace='(NAMESPACE)' gs://BUCKET_NAME` -   create backup
+
+`gcloud datastore import gs://BUCKET_NAME/FILENAME`
+
+## Cloud Pub/Sub
+
+`gcloud pubsub topic create TOPIC_NAME` - Topic creation
+
+`gcloud pubsub subscriptions create SUBSCRIPTION_NAME --topic TOPIC_NAME` - subscription creation from a Topic
+
+## Cloud Dataproc
+
+`gcloud dataproc clusters create CLUSTER_NAME --zone ZONE` - creating cluster in a zone
+
+`gcloud dataproc jobs submit JOB_TYPE --cluster CLUSTER --jar JAR_NAME` - submit job
+
+## Cloud Storage
+
+`gsutil rewrite -s STORAGE_CLASS gs://PATH_TO_OBJECT` - change bucket's storage class (not possible from the Cloud Console)
+
+Options:
+
+* STORAGE_CLASS
+  * `multi_regional`
+  * `regional`
+  * `nearline`
+  * `coldline`
+
+`gsutil mv gs://SOURCE_BUCKET/SOURCE_OBJECT gs://DESTINATION_BUCKET/DESTINATION_OBJECT` - moves objects between buckets (renaming as well)
