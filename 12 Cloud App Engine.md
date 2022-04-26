@@ -11,7 +11,7 @@
 
 ### YAML options
 
-* `automatic_scaling:`
+* `automatic_scaling:` - based on request rate, response latency, other app metrics
   * `target_cpu_utilization:` - threshold after which additional instances are started
   * `min_instances:`
   * `max_instances:`
@@ -19,7 +19,7 @@
   * `max_pending_latency:`
   * `target_throughput_utilization:` - maximum number of concurrent requests before add new instance. Value: 0.5..0.95
   * `max_concurrent_requests:` - maximum concurrent requests the instance can accept before starting new instance. Default: 10, max: 80
-* `basic_scaling:`
+* `basic_scaling:` - based on application requests
   * `idle_timeout:`
   * `max_instances:`
 * `manual_sclaing:` - allows to control scaling manually
