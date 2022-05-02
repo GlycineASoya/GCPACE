@@ -69,7 +69,7 @@ Options for DNS:
 
 ### Expanding CIDR and IP address Manipulation
 
-`gcloud compute networks subnet exapnd-ip-range SUBNET_NAME --prefix-length 16` - expanding subnet by changing the prefix to a new value - 16 therefore the number of hosts is 65536. Cannot be shrunk
+`gcloud compute networks subnet expand-ip-range SUBNET_NAME --prefix-length 16` - expanding subnet by changing the prefix to a new value - 16 therefore the number of hosts is 65536. Cannot be shrunk, i.e. set `--prefix-length 16` instead of `--prefix-length 24`, only `--prefix-length 8`
 
 * Reservation of IP addresses can be done via:
   * Cloud Console
