@@ -135,10 +135,15 @@ Options:
   * Import data
     * Cloud Console -> BigQuery -> select Data set -> Create Table
     * Source can be
+      * External tables
+        * Bigtable
+        * Cloud Storage
+        * Upload from Google Drive
+      * Federated queries
+        * Cloud Spanner
+        * Cloud SQL
       * Empty table
-      * Google Cloud Storage
       * Upload from local directory
-      * Upload from Google Drive
     * Format can be
       * CSV
       * JSON
